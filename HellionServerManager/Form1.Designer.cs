@@ -43,7 +43,8 @@
             this.Config_Button_Cancel = new System.Windows.Forms.Button();
             this.Config_Button_Reload = new System.Windows.Forms.Button();
             this.Config_Button_Save = new System.Windows.Forms.Button();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.ServerConfig_PropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.ServerConfig_SetDefaults = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,14 +86,14 @@
             // ToolBar_File_Update
             // 
             this.ToolBar_File_Update.Name = "ToolBar_File_Update";
-            this.ToolBar_File_Update.Size = new System.Drawing.Size(152, 22);
+            this.ToolBar_File_Update.Size = new System.Drawing.Size(121, 22);
             this.ToolBar_File_Update.Text = "Update...";
             this.ToolBar_File_Update.Click += new System.EventHandler(this.ToolBar_File_Update_Click);
             // 
             // ToolBar_File_Exit
             // 
             this.ToolBar_File_Exit.Name = "ToolBar_File_Exit";
-            this.ToolBar_File_Exit.Size = new System.Drawing.Size(152, 22);
+            this.ToolBar_File_Exit.Size = new System.Drawing.Size(121, 22);
             this.ToolBar_File_Exit.Text = "Exit";
             this.ToolBar_File_Exit.Click += new System.EventHandler(this.ToolBar_File_Exit_Click);
             // 
@@ -107,7 +108,7 @@
             // ToolBar_Options_HSMConfig
             // 
             this.ToolBar_Options_HSMConfig.Name = "ToolBar_Options_HSMConfig";
-            this.ToolBar_Options_HSMConfig.Size = new System.Drawing.Size(152, 22);
+            this.ToolBar_Options_HSMConfig.Size = new System.Drawing.Size(139, 22);
             this.ToolBar_Options_HSMConfig.Text = "HSM Config";
             this.ToolBar_Options_HSMConfig.Click += new System.EventHandler(this.ToolBar_Options_HSMConfig_Click);
             // 
@@ -122,7 +123,7 @@
             // ToolBar_Help_About
             // 
             this.ToolBar_Help_About.Name = "ToolBar_Help_About";
-            this.ToolBar_Help_About.Size = new System.Drawing.Size(152, 22);
+            this.ToolBar_Help_About.Size = new System.Drawing.Size(107, 22);
             this.ToolBar_Help_About.Text = "About";
             this.ToolBar_Help_About.Click += new System.EventHandler(this.ToolBar_Help_About_Click);
             // 
@@ -156,13 +157,14 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.ServerConfig_SetDefaults);
             this.splitContainer1.Panel1.Controls.Add(this.Config_Button_Cancel);
             this.splitContainer1.Panel1.Controls.Add(this.Config_Button_Reload);
             this.splitContainer1.Panel1.Controls.Add(this.Config_Button_Save);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.propertyGrid1);
+            this.splitContainer1.Panel2.Controls.Add(this.ServerConfig_PropertyGrid);
             this.splitContainer1.Size = new System.Drawing.Size(727, 423);
             this.splitContainer1.SplitterDistance = 41;
             this.splitContainer1.TabIndex = 0;
@@ -197,13 +199,24 @@
             this.Config_Button_Save.UseVisualStyleBackColor = true;
             this.Config_Button_Save.Click += new System.EventHandler(this.Config_Button_Save_Click);
             // 
-            // propertyGrid1
+            // ServerConfig_PropertyGrid
             // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(727, 378);
-            this.propertyGrid1.TabIndex = 0;
+            this.ServerConfig_PropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ServerConfig_PropertyGrid.Location = new System.Drawing.Point(0, 0);
+            this.ServerConfig_PropertyGrid.Name = "ServerConfig_PropertyGrid";
+            this.ServerConfig_PropertyGrid.PropertySort = System.Windows.Forms.PropertySort.Categorized;
+            this.ServerConfig_PropertyGrid.Size = new System.Drawing.Size(727, 378);
+            this.ServerConfig_PropertyGrid.TabIndex = 0;
+            // 
+            // ServerConfig_SetDefaults
+            // 
+            this.ServerConfig_SetDefaults.Location = new System.Drawing.Point(437, 11);
+            this.ServerConfig_SetDefaults.Name = "ServerConfig_SetDefaults";
+            this.ServerConfig_SetDefaults.Size = new System.Drawing.Size(95, 23);
+            this.ServerConfig_SetDefaults.TabIndex = 3;
+            this.ServerConfig_SetDefaults.Text = "Set Defaults";
+            this.ServerConfig_SetDefaults.UseVisualStyleBackColor = true;
+            this.ServerConfig_SetDefaults.Click += new System.EventHandler(this.ServerConfig_LoadDefaults_Click);
             // 
             // Form1
             // 
@@ -245,7 +258,8 @@
         private System.Windows.Forms.Button Config_Button_Cancel;
         private System.Windows.Forms.Button Config_Button_Reload;
         private System.Windows.Forms.Button Config_Button_Save;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.PropertyGrid ServerConfig_PropertyGrid;
+        private System.Windows.Forms.Button ServerConfig_SetDefaults;
     }
 }
 
